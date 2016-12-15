@@ -1,2 +1,2 @@
 # toDoList
-Web Based ToDo List Practice HTML
+Web App to practice project organization and presentation
