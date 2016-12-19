@@ -1,4 +1,6 @@
-body{
-	text-align: center;
-	margin: 0% 20% 0% 20%;
+#container{
+	background: #ACD1E9;
+	width: 360px;
+	margin: 0 auto; /* margin top-bottom: 0 and left-right: auto */
+	margin-top:10%; /* probably not needed, but it's easy on the eyes */
 }
