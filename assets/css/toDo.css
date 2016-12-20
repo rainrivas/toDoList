@@ -1,6 +1,15 @@
-#container{
-	background: #ACD1E9;
-	width: 360px;
-	margin: 0 auto; /* margin top-bottom: 0 and left-right: auto */
-	margin-top:10%; /* probably not needed, but it's easy on the eyes */
+#container {
+    background: #ACD1E9;
+    width: 360px;
+    margin: 0 auto; /* margin top-bottom: 0 and left-right: auto */
+    margin-top: 10%; /* probably not needed, but it's easy on the eyes */
+}
+
+.hidden {
+    display: none;
+}
+
+.completed {
+    color: grey;
+    text-decoration: line-through;
 }
