@@ -24,10 +24,18 @@ $("li").on("click", function() {
     $(this).toggleClass("completed");
 });
 
+// eventaully turn this into delete enter/exit
 $("li span").on("mouseenter", function() {
     $(this).css("font-weight", "bold");
 });
 
 $("li span").on("mouseleave", function() {
     $(this).css("font-weight", "normal");
+});
+
+$("span").click(function(event){
+    $(this).parent().fadeOut(350,function(){
+        $(this).remove();
+    });
+    event.stopPropogation(); // stops the span click from bubbling to li
 });
