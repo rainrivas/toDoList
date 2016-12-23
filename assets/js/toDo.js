@@ -12,8 +12,9 @@ addToDo.on("click", function() {
 toDoEntry.on("keypress", function(event) {
     if (event.which === 13) {
         console.log("You Pressed Enter; I should do something");
-        newToDo = "<li><span>X </span>" + toDoEntry.val() + "</li>";
-        $(newToDo).appendTo($("ul"));
+        newToDo = "<li><span>X</span> " + toDoEntry.val() + "</li>";
+        // $(newToDo).appendTo($("ul"));
+        $("ul").append(newToDo);
         toDoEntry.val("");
         toDoEntry.toggleClass("hidden")
             // once new list added and field cleared, we need to hide the to do list agian
