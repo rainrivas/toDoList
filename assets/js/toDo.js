@@ -21,21 +21,22 @@ toDoEntry.on("keypress", function(event) {
     }
 });
 
-$("li").on("click", function() {
+// parent gets the listener so that we can check for clicks on child elements
+$("ul").on("click", "li", function() {
     $(this).toggleClass("completed");
 });
 
 // eventaully turn this into delete enter/exit
-$("li span").on("mouseenter", function() {
+$("ul").on("mouseenter", "span", function() {
     $(this).css("font-weight", "bold");
 });
 
-$("li span").on("mouseleave", function() {
+$("ul").on("mouseleave", "span", function() {
     $(this).css("font-weight", "normal");
 });
 
-$("span").click(function(event){
-    $(this).parent().fadeOut(350,function(){
+$("ul").on("click", "span", function(event) {
+    $(this).parent().fadeOut(350, function() {
         $(this).remove();
     });
     event.stopPropogation(); // stops the span click from bubbling to li
