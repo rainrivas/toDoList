@@ -5,7 +5,7 @@ var toDoEntry = $("#toDoEntry");
 
 addToDo.on("click", function() {
     toDoEntry.toggleClass("hidden");
-    console.log("+ ToDo clicked");
+    toDoEntry.val("");
 });
 
 // This could become a "create new to do function which is called upon keypress of +ToDo button"
