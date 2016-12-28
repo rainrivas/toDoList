@@ -12,7 +12,7 @@ addToDo.on("click", function() {
 toDoEntry.on("keypress", function(event) {
     if (event.which === 13) {
         console.log("You Pressed Enter; I should do something");
-        newToDo = "<li><span>X</span> " + toDoEntry.val() + "</li>";
+        newToDo = "<li><span><i class='fa fa-trash fa-lg' aria-hidden='true'></i></span> " + toDoEntry.val() + "</li>";
         // $(newToDo).appendTo($("ul"));
         $("ul").append(newToDo);
         toDoEntry.val("");
@@ -24,15 +24,6 @@ toDoEntry.on("keypress", function(event) {
 // parent gets the listener so that we can check for clicks on child elements
 $("ul").on("click", "li", function() {
     $(this).toggleClass("completed");
-});
-
-// eventaully turn this into delete enter/exit
-$("ul").on("mouseenter", "span", function() {
-    $(this).css("font-weight", "bold");
-});
-
-$("ul").on("mouseleave", "span", function() {
-    $(this).css("font-weight", "normal");
 });
 
 $("ul").on("click", "span", function(event) {

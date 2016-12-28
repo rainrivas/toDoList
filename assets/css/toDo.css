@@ -71,3 +71,20 @@ input:focus {
     font-weight: normal; /* by default h1 is bolded */
     float: right;
 }
+
+span {
+	background-color: #e74c3c;
+	height: 40px;
+	width: 0px;
+	transition: 0.2s linear;
+	display: inline-block;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	opacity:0;
+}
+
+li:hover span{
+	width:40px;
+	opacity: 1.0;
+}
