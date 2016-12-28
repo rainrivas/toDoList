@@ -3,6 +3,11 @@ var newToDo;
 var addToDo = $("#addToDo");
 var toDoEntry = $("#toDoEntry");
 
+/* ALTERNATIVE CHOICE */
+// $(".fa-plus").on("click",function(){
+//     toDoEntry.fadeToggle();
+// });
+
 addToDo.on("click", function() {
     toDoEntry.toggleClass("hidden");
     toDoEntry.val("");
