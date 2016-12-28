@@ -45,8 +45,8 @@ input {
     background-color: #f7f7f7;
     width: 100%;
     padding: 13px 13px 13px 20px;
-    box-sizing: border-box;
-    /* we will need the web kit preface (moz) */
+    box-sizing: border-box; /* we will need the web kit preface (moz) */
+    border: 3px solid rgba(0,0,0,0);
 }
 
 input:focus {
