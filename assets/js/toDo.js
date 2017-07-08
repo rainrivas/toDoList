@@ -12,6 +12,7 @@ var listItems = [].slice.call($('#listItems')[0].children);
 addToDo.on("click", function() {
     toDoEntry.toggleClass("hidden");
     toDoEntry.val("");
+    toDoEntry.focus();
 });
 
 // This could become a "create new to do function which is called upon keypress of +ToDo button"
@@ -27,11 +28,6 @@ toDoEntry.on("keypress", function(event) {
     }
 });
 
-// parent gets the listener so that we can check for clicks on child elements
-$("ul").on("click", "li", function() {
-    $(this).toggleClass("completed");
-});
-
 $("ul").on("click", "span", function(event) {
     $(this).parent().fadeOut(350, function() {
         $(this).remove();
@@ -41,11 +37,11 @@ $("ul").on("click", "span", function(event) {
 
 // confirm list clear
 function clearConfirm() {
-    var userContinue = confirm('Clear entire list?');   
+    var userContinue = confirm('Clear entire list?');  
+
+    listItems = [].slice.call($('#listItems')[0].children);
 
     if (userContinue) {
-        listItems = [].slice.call($('#listItems')[0].children);
-        
         listItems.forEach(function(item) {
             item.remove();
         })
