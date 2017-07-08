@@ -19,12 +19,21 @@ addToDo.on("click", function() {
 toDoEntry.on("keypress", function(event) {
     if (event.which === 13) {
         console.log("You Pressed Enter; I should do something");
-        newToDo = "<li><span><i class='fa fa-trash fa-lg' aria-hidden='true'></i></span> " + toDoEntry.val() + "</li>";
-        // $(newToDo).appendTo($("ul"));
-        $("ul").append(newToDo);
-        toDoEntry.val("");
-        toDoEntry.toggleClass("hidden")
-            // once new list added and field cleared, we need to hide the to do list agian
+        // clear toDoEntry.val() if only white space entered
+        toDoEntry.val($.trim(toDoEntry.val()));
+
+        if (toDoEntry.val() !== "") {
+            newToDo = "<li><span><i class='fa fa-trash fa-lg' aria-hidden='true'></i></span> " + toDoEntry.val() + "</li>";
+            // $(newToDo).appendTo($("ul"));
+            $("ul").append(newToDo);
+            toDoEntry.val("");
+            toDoEntry.toggleClass("hidden");
+                // once new list added and field cleared, we need to hide the to do list agian
+        }
+        else {
+            toDoEntry.val("");
+            toDoEntry.toggleClass("hidden");
+        }
     }
 });
 
