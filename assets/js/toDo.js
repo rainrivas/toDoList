@@ -2,6 +2,7 @@ console.log("Connected");
 var newToDo;
 var addToDo = $("#addToDo");
 var toDoEntry = $("#toDoEntry");
+var listItems = [].slice.call($('#listItems')[0].children);
 
 /* ALTERNATIVE CHOICE */
 // $(".fa-plus").on("click",function(){
@@ -37,3 +38,16 @@ $("ul").on("click", "span", function(event) {
     });
     event.stopPropogation(); // stops the span click from bubbling to li
 });
+
+// confirm list clear
+function clearConfirm() {
+    var userContinue = confirm('Clear entire list?');   
+
+    if (userContinue) {
+        listItems = [].slice.call($('#listItems')[0].children);
+        
+        listItems.forEach(function(item) {
+            item.remove();
+        })
+    }
+}
