@@ -3,16 +3,16 @@
 
 <head>
     <title>To Do List</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/toDo.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="assets/js/lib/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/toDo.css">
 </head>
 
 <body>
     <div id="container">
-        <h1>To Do List<i id="addToDo" class="fa fa-plus-circle" aria-hidden="true"></i></h1>
+        <h1>To Do List<i id="addToDo" class="fa fa-plus-circle" aria-hidden="true" tabindex="0"></i></h1>
         <input type="text" id="toDoEntry" placeholder="Add New To Do" class="hidden">
         <ul id="listItems">
             <li><span><i class="fa fa-trash fa-lg" aria-hidden="true"></i></span> Sample 1</li>
@@ -21,9 +21,6 @@
         </ul>
         <div id="actionItems">
             <div class="button-block">
-                <button class="btn btn-block btn-success" id="sendToPhone" type="button">
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Send to Phone
-                </button>
                 <button class="btn btn-block btn-danger" id="clearEntries" type="button" onclick="clearConfirm()">
                     <i class="fa fa-trash-o" aria-hidden="true"></i> Clear
                 </button>
